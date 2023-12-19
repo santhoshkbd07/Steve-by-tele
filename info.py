@@ -1,4 +1,4 @@
-#XO-N0VA
+ni#XO-N0VA
 import re
 from os import environ
 from Script import *
@@ -14,9 +14,9 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', '21925188'))
+API_ID = int(environ.get('API_ID', '29458624'))
 API_HASH = environ.get('API_HASH', 'f9b377f83f916d783f25d95a2f4e232e')
-BOT_TOKEN = environ.get('BOT_TOKEN', '5718727713:AAEpcnESCyWDuUCwMz3k_DU7pXp2LiidGao')
+BOT_TOKEN = environ.get('BOT_TOKEN', '4c6e3cdf48246d090e0249e76a1199e1')
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -33,7 +33,7 @@ ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '0').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-auth_channel = environ.get('AUTH_CHANNEL', "-1001887195187")
+auth_channel = environ.get('AUTH_CHANNEL', "none")
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
@@ -52,9 +52,9 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Ipopuding')
 IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'False')), False)
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "0")
 VERIFY2_URL = environ.get('VERIFY2_URL', "tnshort.net")
-VERIFY2_API = environ.get('VERIFY2_API', "eadd283ee4fb83c41e43cb36b73bf5f658c29645")
+VERIFY2_API = environ.get('VERIFY2_API', "0a46a267491e73ad689392c633af47c3c1b00a43")
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'tnshort.net')
-SHORTLINK_API = environ.get('SHORTLINK_API', 'eadd283ee4fb83c41e43cb36b73bf5f658c29645')
+SHORTLINK_API = environ.get('SHORTLINK_API', '0a46a267491e73ad689392c633af47c3c1b00a43')
 IS_SHORTLINK = is_enabled((environ.get('IS_SHORTLINK', 'True')), True)
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "5")
@@ -63,7 +63,7 @@ PORT = environ.get("PORT", "8080")
 GRP_LNK = environ.get('GRP_LNK', 'https://t.me/+2VrRus8vN30wYzRl')
 CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/tamil_movies_telugu_movies_hindi')
 MSG_ALRT = environ.get('MSG_ALRT', 'ᴠᴀʟᴀʀ ᴍᴏʀɢʜᴜʟɪs!')
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001680243578'))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', 'none'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'Comrade Movies')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
